@@ -669,7 +669,7 @@
                 }
             },
             touchMove: function (endCoords, startCoords) {
-                // swipe �����Ҷ� moveOn �߰�
+                // swipe 시작할때 moveOn 추가
                 $slide.css('transition-duration', '0ms').addClass('moveOn');
                 if (settings.mode === 'slide') {
                     var distance = endCoords - startCoords;
@@ -695,7 +695,7 @@
 
             touchEnd: function (distance) {
                 $slide.css('transition-duration', settings.speed + 'ms');
-                // swipe�� ������ moveOn ����
+                // swipe가 끝나면 moveOn 삭제
                 setTimeout(function(){
                     $slide.removeClass('moveOn');
                 }, 100);
